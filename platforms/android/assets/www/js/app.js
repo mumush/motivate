@@ -324,6 +324,9 @@ app.controller('FoodLogCtrl', function($scope) {
     return $scope.shownGroup === group;
   };
 
+
+  $scope.toggleGroup($scope.friday);
+
 })
 
 app.controller('CameraCtrl', function($scope, $cordovaCamera) {
@@ -358,6 +361,7 @@ app.controller('MotivateCtrl', function($scope, $ionicPopup) {
     $scope.showConfirm = function() {
       var confirmPopup = $ionicPopup.confirm({
         title: 'Motivate Nate',
+        cssClass: 'pop-up-motivate-someone',
         buttons: [{text: "CANCEL"}, {text: "SEND", onTap: motivateSentSuccess}],
         templateUrl: 'templates/motivate-popup.html'
       });
@@ -401,13 +405,14 @@ app.controller('GetMotivatedCtrl', function($scope, $ionicPopup) {
     // A confirm dialog
     $scope.showConfirm = function() {
       var confirmPopup = $ionicPopup.confirm({
+        cssClass: 'pop-up-be-motivated',
         buttons: [{text: "OKAY"}],
         templateUrl: 'templates/get-motivated-popup.html'
       });
 
     };
 
-   setTimeout(function() {showCard();}, 10000);
+   setTimeout(function() {showCard();}, 5000);
 
    function showCard() {
       console.log("hello");
