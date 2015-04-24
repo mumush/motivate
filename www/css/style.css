@@ -512,7 +512,7 @@ body {
 
 /* Motivate Someone Styles */
 
-.popup-refresh {
+.pop-up-motivate-someone .popup-refresh {
 
    font-family: "Roboto";
    font-weight: 300;
@@ -522,7 +522,7 @@ body {
 
 }
 
-.popup-message {
+.pop-up-motivate-someone .popup-message {
 
    margin-top: .8em;
    margin-bottom: 1.2em;
@@ -537,7 +537,7 @@ body {
 
 }
 
-.popup-signoff {
+.pop-up-motivate-someone .popup-signoff {
 
    margin-bottom: 2em;
 
@@ -549,7 +549,7 @@ body {
 
 }
 
-.popup-includePhoto {
+.pop-up-motivate-someone .popup-includePhoto {
 
    font-family: "Roboto";
    font-weight: 300;
@@ -562,19 +562,19 @@ body {
 
 /* Be Motivated Styles */
 
-.popup-image {
+.pop-up-be-motivated .popup-image {
 
    margin: 0 auto;
 
-   background: url("../img/selfie.png") no-repeat top center;
+   background: url("../img/motivation.jpg") no-repeat top left;
 
-   width: 120px;
-   height: 120px;
+   width: 180px;
+   height: 180px;
    border-radius: 50%;
 
 }
 
-.popup-motivated-message {
+.pop-up-be-motivated .popup-motivated-message {
 
    margin-top: 2.5em;
    margin-bottom: 1.5em;
@@ -589,7 +589,7 @@ body {
 
 }
 
-.popup-motivated-signoff {
+.pop-up-be-motivated .popup-motivated-signoff {
 
    margin-bottom: 0;
 
@@ -598,5 +598,11 @@ body {
    font-weight: 300;
 
    color: #000;
+
+}
+
+.pop-up-be-motivated .popup-buttons {
+
+   margin-right: 1.7em;
 
 }
