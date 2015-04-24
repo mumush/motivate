@@ -1,0 +1,27 @@
+<ion-view title="Add Food"> <!-- Title on top nav bar is gottent from this title attribute -->
+
+   <ion-content ng-controller="ServingSizeCtrl" padding="true" overflow-scroll="true">
+
+      <div class="card addFoodCard">
+
+         <h2>Wegmans Cup Noodle</h2>
+
+
+         <button ng-click="openPopover($event)" id="servingSizeBut" class="dropdownButton">
+            Serving Size <i class="ion-android-arrow-dropdown"></i>
+         </button>
+
+         <button ng-controller="ServingTypeCtrl" ng-click="openPopover($event)" id="servingTypeBut" class="dropdownButton">
+            Cups <i class="ion-android-arrow-dropdown"></i>
+         </button>
+
+         <p>
+            Total Calories: <span id="totalCalsCount">0</span>
+         </p>
+
+      </div>
+
+      <button class="logButton" ui-sref="app.log" ng-click="backToHome()">Log Food</button>
+
+   </ion-content>
+</ion-view>

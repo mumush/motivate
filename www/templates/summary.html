@@ -1,0 +1,126 @@
+<ion-view title="Summary"> <!-- Title on top nav bar is gottent from this title attribute -->
+
+   <ion-content class="summaryContainer" padding="true" overflow-scroll="true">
+
+      <div class="card">
+
+         <h2>Calories</h2>
+
+         <p style="margin-left: 76%;">
+            <span class="currentCount">1012</span>/2000
+         </p>
+
+         <div class="meter">
+            <span class="achieved"></span><span class="not-achieved"></span>
+         </div>
+
+         <ion-list ng-controller="SummaryGroupsCtrl">
+           <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(calories)" ng-class="{active: isGroupShown(calories)}">
+                {{calories.label}} &nbsp; <i class="icon" ng-class="isGroupShown(calories) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in calories.foods" ng-show="isGroupShown(calories)">
+               {{food.name}}
+               <span class="item-note">
+                  {{food.quantity}}
+               </span>
+             </ion-item>
+           </div>
+         </ion-list>
+
+      </div>
+
+      <div class="card">
+
+         <h2>Protein</h2>
+
+         <p style="margin-left: 85%;">
+            <span class="currentCount">16</span>/50
+         </p>
+
+         <div class="meter">
+            <span class="achieved" style="width:30%;"></span><span class="not-achieved" style="width:70%;"></span>
+         </div>
+
+         <ion-list ng-controller="SummaryGroupsCtrl">
+           <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(protein)" ng-class="{active: isGroupShown(protein)}">
+                {{protein.label}} &nbsp; <i class="icon" ng-class="isGroupShown(protein) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in protein.foods" ng-show="isGroupShown(protein)">
+               {{food.name}}
+               <span class="item-note">
+                  {{food.quantity}}
+               </span>
+             </ion-item>
+           </div>
+         </ion-list>
+
+      </div>
+
+      <div class="card">
+
+         <h2>Carbs</h2>
+
+         <p style="margin-left: 83%;">
+            <span class="currentCount">81</span>/100
+         </p>
+
+         <div class="meter">
+            <span class="achieved" style="width:70%;"></span><span class="not-achieved" style="width:30%;"></span>
+         </div>
+
+         <ion-list ng-controller="SummaryGroupsCtrl">
+           <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(carbs)" ng-class="{active: isGroupShown(carbs)}">
+                {{carbs.label}} &nbsp; <i class="icon" ng-class="isGroupShown(carbs) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in carbs.foods" ng-show="isGroupShown(carbs)">
+               {{food.name}}
+               <span class="item-note">
+                  {{food.quantity}}
+               </span>
+             </ion-item>
+           </div>
+         </ion-list>
+
+      </div>
+
+      <div class="card">
+
+         <h2>Fats</h2>
+
+         <p style="margin-left: 85%;">
+            <span class="currentCount">59</span>/65
+         </p>
+
+         <div class="meter">
+            <span class="achieved" style="width:90%;"></span><span class="not-achieved" style="width:10%;"></span>
+         </div>
+
+         <ion-list ng-controller="SummaryGroupsCtrl">
+           <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(fats)" ng-class="{active: isGroupShown(fats)}">
+                {{fats.label}} &nbsp; <i class="icon" ng-class="isGroupShown(fats) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in fats.foods" ng-show="isGroupShown(fats)">
+               {{food.name}}
+               <span class="item-note">
+                  {{food.quantity}}
+               </span>
+             </ion-item>
+           </div>
+         </ion-list>
+
+      </div>
+
+   </ion-content>
+
+   <button class="mtv-floating-button" ui-sref="app.summary.search"><i class="ion-fork"></i> <i class="ion-knife"></i></button>
+
+   <div id="getMotivatedCard" ng-controller="GetMotivatedCtrl">
+      <p id="motivatedCardText">Ryan sent you a message!</p>
+      <button id="motivatedCardButton" ng-click="seeMotivation()">VIEW</button>
+   </div>
+
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view title="Search Food"> <!-- Title on top nav bar is gottent from this title attribute -->
+
+   <ion-content padding="true" overflow-scroll="true">
+
+
+   <form ng-submit="submitSearch()" ng-controller="FoodsCtrl" class="card searchFoodForm">
+      <label class="item item-input">
+         <i class="icon ion-search placeholder-icon"></i>
+         <input type="text" placeholder="Search" ng-click="">
+      </label>
+   </form>
+
+     <ion-list ng-controller="FoodsCtrl">
+        <div id="recentFoods" class="list card">
+          <a href="#" class="item" ng-repeat="food in recentFoods" ui-sref="app.summary.add">{{food.name}}</a>
+        </div>
+     </ion-list>
+
+     <ion-list ng-controller="FoodsCtrl">
+        <div id="resultFoods" class="list card">
+          <a href="#" class="item" ng-repeat="food in resultFoods" ui-sref="app.summary.add">{{food.name}}</a>
+        </div>
+     </ion-list>
+
+
+
+   </ion-content>
+
+</ion-view>

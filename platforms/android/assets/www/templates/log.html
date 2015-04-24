@@ -1,0 +1,339 @@
+<ion-view title="Log"> <!-- Title on top nav bar is gottent from this title attribute -->
+  <ion-content padding="true" overflow-scroll="true">
+
+     <div class="dayContainer">
+
+        <div class="date today">
+           <span class="dayNumber">24</span>
+           <span class="dayAbbr">Fri</span>
+        </div>
+
+        <div class="card">
+
+          <h3>Overall Daily Progress</h3>
+
+          <div class="meter">
+             <span class="achieved" style="width:25%;"></span><span class="not-achieved" style="width:75%;"></span>
+          </div>
+
+          <ion-list ng-controller="FoodLogCtrl">
+             <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(friday)" ng-class="{active: isGroupShown(friday)}">
+                  {{friday.label}} &nbsp; <i class="icon" ng-class="isGroupShown(friday) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in friday.foods" ng-show="isGroupShown(friday)">
+                {{food.name}}
+                <span class="item-note">
+                    {{food.quantity}}
+                </span>
+             </ion-item>
+             </div>
+          </ion-list>
+
+        </div>
+
+     </div>
+
+     <div class="dayContainer">
+
+        <div class="date">
+           <span class="dayNumber">23</span>
+           <span class="dayAbbr">Thu</span>
+        </div>
+
+        <div class="card">
+
+          <h3>Overall Daily Progress</h3>
+
+          <div class="meter">
+             <span class="achieved" style="width:85%;"></span><span class="not-achieved" style="width:15%;"></span>
+          </div>
+
+          <ion-list ng-controller="FoodLogCtrl">
+             <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(thursday)" ng-class="{active: isGroupShown(thursday)}">
+                  {{thursday.label}} &nbsp; <i class="icon" ng-class="isGroupShown(thursday) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in thursday.foods" ng-show="isGroupShown(thursday)">
+                {{food.name}}
+                <span class="item-note">
+                    {{food.quantity}}
+                </span>
+             </ion-item>
+             </div>
+          </ion-list>
+
+        </div>
+
+     </div>
+
+     <div class="dayContainer">
+
+        <div class="date">
+           <span class="dayNumber">22</span>
+           <span class="dayAbbr">Wed</span>
+        </div>
+
+        <div class="card">
+
+          <h3>Overall Daily Progress</h3>
+
+          <div class="meter">
+             <span class="achieved" style="width:100%;"></span><span class="not-achieved" style="width:0%;"></span>
+          </div>
+
+          <ion-list ng-controller="FoodLogCtrl">
+             <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(wednesday)" ng-class="{active: isGroupShown(wednesday)}">
+                  {{wednesday.label}} &nbsp; <i class="icon" ng-class="isGroupShown(wednesday) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in wednesday.foods" ng-show="isGroupShown(wednesday)">
+                {{food.name}}
+                <span class="item-note">
+                    {{food.quantity}}
+                </span>
+             </ion-item>
+             </div>
+          </ion-list>
+
+        </div>
+
+     </div>
+
+     <div class="dayContainer">
+
+        <div class="date">
+           <span class="dayNumber">21</span>
+           <span class="dayAbbr">Tue</span>
+        </div>
+
+        <div class="card">
+
+          <h3>Overall Daily Progress</h3>
+
+          <div class="meter">
+             <span class="achieved" style="width:35%;"></span><span class="not-achieved" style="width:65%;"></span>
+          </div>
+
+          <ion-list ng-controller="FoodLogCtrl">
+             <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(friday)" ng-class="{active: isGroupShown(friday)}">
+                  {{friday.label}} &nbsp; <i class="icon" ng-class="isGroupShown(friday) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in friday.foods" ng-show="isGroupShown(friday)">
+                {{food.name}}
+                <span class="item-note">
+                    {{food.quantity}}
+                </span>
+             </ion-item>
+             </div>
+          </ion-list>
+
+        </div>
+
+     </div>
+
+     <div class="dayContainer">
+
+        <div class="date">
+           <span class="dayNumber">20</span>
+           <span class="dayAbbr">Mon</span>
+        </div>
+
+        <div class="card">
+
+          <h3>Overall Daily Progress</h3>
+
+          <div class="meter">
+             <span class="achieved" style="width:100%;"></span><span class="not-achieved" style="width:0%;"></span>
+          </div>
+
+          <ion-list ng-controller="FoodLogCtrl">
+             <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(wednesday)" ng-class="{active: isGroupShown(wednesday)}">
+                  {{wednesday.label}} &nbsp; <i class="icon" ng-class="isGroupShown(wednesday) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in wednesday.foods" ng-show="isGroupShown(wednesday)">
+                {{food.name}}
+                <span class="item-note">
+                    {{food.quantity}}
+                </span>
+             </ion-item>
+             </div>
+          </ion-list>
+
+        </div>
+
+     </div>
+
+     <div class="dayContainer">
+
+        <div class="date">
+           <span class="dayNumber">19</span>
+           <span class="dayAbbr">Sun</span>
+        </div>
+
+        <div class="card">
+
+          <h3>Overall Daily Progress</h3>
+
+          <div class="meter">
+             <span class="achieved" style="width:85%;"></span><span class="not-achieved" style="width:15%;"></span>
+          </div>
+
+          <ion-list ng-controller="FoodLogCtrl">
+             <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(friday)" ng-class="{active: isGroupShown(friday)}">
+                  {{friday.label}} &nbsp; <i class="icon" ng-class="isGroupShown(friday) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in friday.foods" ng-show="isGroupShown(friday)">
+                {{food.name}}
+                <span class="item-note">
+                    {{food.quantity}}
+                </span>
+             </ion-item>
+             </div>
+          </ion-list>
+
+        </div>
+
+     </div>
+
+     <div class="dayContainer">
+
+        <div class="date">
+           <span class="dayNumber">18</span>
+           <span class="dayAbbr">Sat</span>
+        </div>
+
+        <div class="card">
+
+          <h3>Overall Daily Progress</h3>
+
+          <div class="meter">
+             <span class="achieved" style="width:100%;"></span><span class="not-achieved" style="width:0%;"></span>
+          </div>
+
+          <ion-list ng-controller="FoodLogCtrl">
+             <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(wednesday)" ng-class="{active: isGroupShown(wednesday)}">
+                  {{wednesday.label}} &nbsp; <i class="icon" ng-class="isGroupShown(wednesday) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in wednesday.foods" ng-show="isGroupShown(wednesday)">
+                {{food.name}}
+                <span class="item-note">
+                    {{food.quantity}}
+                </span>
+             </ion-item>
+             </div>
+          </ion-list>
+
+        </div>
+
+     </div>
+
+     <div class="dayContainer">
+
+        <div class="date">
+           <span class="dayNumber">17</span>
+           <span class="dayAbbr">Fri</span>
+        </div>
+
+        <div class="card">
+
+          <h3>Overall Daily Progress</h3>
+
+          <div class="meter">
+             <span class="achieved" style="width:15%;"></span><span class="not-achieved" style="width:85%;"></span>
+          </div>
+
+          <ion-list ng-controller="FoodLogCtrl">
+             <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(friday)" ng-class="{active: isGroupShown(friday)}">
+                  {{friday.label}} &nbsp; <i class="icon" ng-class="isGroupShown(friday) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in friday.foods" ng-show="isGroupShown(friday)">
+                {{food.name}}
+                <span class="item-note">
+                    {{food.quantity}}
+                </span>
+             </ion-item>
+             </div>
+          </ion-list>
+
+        </div>
+
+     </div>
+
+     <div class="dayContainer">
+
+        <div class="date">
+           <span class="dayNumber">16</span>
+           <span class="dayAbbr">Thu</span>
+        </div>
+
+        <div class="card">
+
+          <h3>Overall Daily Progress</h3>
+
+          <div class="meter">
+             <span class="achieved" style="width:100%;"></span><span class="not-achieved" style="width:0%;"></span>
+          </div>
+
+          <ion-list ng-controller="FoodLogCtrl">
+             <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(wednesday)" ng-class="{active: isGroupShown(wednesday)}">
+                  {{wednesday.label}} &nbsp; <i class="icon" ng-class="isGroupShown(wednesday) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in wednesday.foods" ng-show="isGroupShown(wednesday)">
+                {{food.name}}
+                <span class="item-note">
+                    {{food.quantity}}
+                </span>
+             </ion-item>
+             </div>
+          </ion-list>
+
+        </div>
+
+     </div>
+
+     <div class="dayContainer">
+
+        <div class="date">
+           <span class="dayNumber">15</span>
+           <span class="dayAbbr">Wed</span>
+        </div>
+
+        <div class="card">
+
+          <h3>Overall Daily Progress</h3>
+
+          <div class="meter">
+             <span class="achieved" style="width:95%;"></span><span class="not-achieved" style="width:5%;"></span>
+          </div>
+
+          <ion-list ng-controller="FoodLogCtrl">
+             <div class="accordion">
+             <ion-item style="text-align: center;" class="item-stable" ng-click="toggleGroup(friday)" ng-class="{active: isGroupShown(friday)}">
+                  {{friday.label}} &nbsp; <i class="icon" ng-class="isGroupShown(friday) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+             </ion-item>
+             <ion-item class="item-accordion" ng-repeat="food in friday.foods" ng-show="isGroupShown(friday)">
+                {{food.name}}
+                <span class="item-note">
+                    {{food.quantity}}
+                </span>
+             </ion-item>
+             </div>
+          </ion-list>
+
+        </div>
+
+     </div>
+
+
+  </ion-content>
+
+  <button class="mtv-floating-button" ui-sref="app.summary.search"><i class="ion-fork"></i> <i class="ion-knife"></i></button>
+
+</ion-view>
