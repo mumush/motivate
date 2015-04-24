@@ -407,7 +407,7 @@ app.controller('GetMotivatedCtrl', function($scope, $ionicPopup) {
 
     };
 
-   setTimeout(function() {showCard();}, 10000);
+   setTimeout(function() {showCard();}, 5000);
 
    function showCard() {
       console.log("hello");

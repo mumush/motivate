@@ -509,6 +509,9 @@ body {
 
 /*End Overwrites*/
 
+
+/* Motivate Someone Styles */
+
 .popup-refresh {
 
    font-family: "Roboto";
@@ -553,5 +556,47 @@ body {
    font-size: .9em;
 
    color: #9A9999;
+
+}
+
+
+/* Be Motivated Styles */
+
+.popup-image {
+
+   margin: 0 auto;
+
+   background: url("../img/selfie.png") no-repeat top center;
+
+   width: 120px;
+   height: 120px;
+   border-radius: 50%;
+
+}
+
+.popup-motivated-message {
+
+   margin-top: 2.5em;
+   margin-bottom: 1.5em;
+
+   font-family: "Roboto";
+   font-size: 1.1em;
+   font-weight: 300;
+
+   color: #000;
+
+   line-height: 1.5em;
+
+}
+
+.popup-motivated-signoff {
+
+   margin-bottom: 0;
+
+   font-family: "Roboto";
+   font-size: 1.2em;
+   font-weight: 300;
+
+   color: #000;
 
 }
